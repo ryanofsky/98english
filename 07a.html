@@ -32,11 +32,11 @@
       <div align="center"><center><p><strong><font face="Contemporary Brush"><input TYPE="text"
       SIZE="15" NAME="word1"> <input TYPE="submit" VALUE="Save Word" NAME="Savebut"> </font></strong></p>
       </center></div><script>
-function form1_onsubmit()
-  document.Form1.Savebut.value="Save Another"    
-  alert ("'" +Form1.word1.value + "' has been saved")
-  form1_onsubmit = false
-end function
+document.forms.Form1.onsubmit = function() {
+  document.forms.Form1.Savebut.value="Save Another";
+  alert ("'" +document.forms.Form1.word1.value + "' has been saved")
+  return false;
+};
         </script>
 
     </form>
